@@ -1,0 +1,50 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PROJECT_ROOT:-.}/.claude/hooks/session-start.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PROJECT_ROOT:-.}/.claude/hooks/pre-tool-use.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PROJECT_ROOT:-.}/.claude/hooks/post-tool-use.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PROJECT_ROOT:-.}/.claude/hooks/subagent-stop.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
