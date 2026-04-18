@@ -2,8 +2,6 @@
 
 A self-orchestrating Claude Code agent framework — predefined agents, skills, hooks, slash commands, and rule packs, ready to drop into any project.
 
-This repo is a personal fork of [`ghollbeck/claude-ultra-template`](https://github.com/ghollbeck/claude-ultra-template), adapted and simplified for Riccardo's own workflow (solo founder-developer, Python/FastAPI + TypeScript/React stack).
-
 ---
 
 ## Table of Contents
